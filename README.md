@@ -1,4 +1,4 @@
-[![wercker status](https://app.wercker.com/status/12c836528bbd42f7cc510e32f25f4451/m "wercker status")](https://app.wercker.com/project/bykey/12c836528bbd42f7cc510e32f25f4451)
+[![wercker status](https://app.wercker.com/status/b4c05c958afd4687396a7bf6c43a9a7d/m "wercker status")](https://app.wercker.com/project/bykey/b4c05c958afd4687396a7bf6c43a9a7d)
 
 # Hubot
 
