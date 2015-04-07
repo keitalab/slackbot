@@ -26,7 +26,8 @@
     "hubot-github-repo-event-notifier": "git://github.com/martinb3/hubot-github-repo-event-notifier.git",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "hubot-slack": "3.3.0",
-    "hubot-zoi": "^0.1.0"
+    "hubot-zoi": "^0.1.0",
+    "hubot-clean": "git://github.com/ryosuketakakuwa/hubot-clean.git"
   },
   "engines": {
     "node": ">= 0.8.x",
