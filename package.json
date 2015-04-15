@@ -27,7 +27,8 @@
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "hubot-slack": "3.3.0",
     "hubot-zoi": "^0.1.0",
-    "hubot-clean": "git://github.com/ryosuketakakuwa/hubot-clean.git"
+    "hubot-clean": "git://github.com/ryosuketakakuwa/hubot-clean.git",
+    "js-yaml": "3.2.7"
   },
   "engines": {
     "node": ">= 0.8.x",
