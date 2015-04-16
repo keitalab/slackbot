@@ -4,7 +4,6 @@ url = require('url')
 module.exports = (robot) ->
   robot.router.post "/hubot/remote", (req, res) ->
     q = req.body
-    robot.logger.info q
 
     data =
       username: q.user
@@ -13,6 +12,8 @@ module.exports = (robot) ->
       text: q.text
 
     robot.emit 'slack.attachment', data
+
+    res.end
 
   robot.hear /.*/i, (res) ->
     robot.logger.info res
