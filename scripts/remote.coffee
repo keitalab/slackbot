@@ -12,7 +12,7 @@ module.exports = (robot) ->
       channel: q.channel
       text: q.text
 
-  robot.emit 'slack.attachment', data
+    robot.emit 'slack.attachment', data
 
   robot.hear /.*/i, (res) ->
     robot.logger.info res
