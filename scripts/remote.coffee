@@ -6,21 +6,24 @@ module.exports = (robot) ->
     q = req.body
     robot.logger.info q
 
-
-    data =
+    envelope =
+      room: q.room
+      uesr:
+        name: q.user
+        icon_url: q.icon_url
+    messages =
       as_user: true
-      uesrname: q.user
       icon_url: q.icon_url
       channel: q.channel
       text: q.text
 
-    robot.customMessage data
+    robot.send envelope q.text
   
   robot.hear /.*/i, (res) ->
     robot.logger.info res
     data =
       user: res.message.user.name
-      channel: res.message.room
+      room: res.message.room
       text: res.message.text
     robot.http(target+"/hubot/remote")
       .post(data) (err, res, body) ->
