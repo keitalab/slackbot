@@ -1,17 +1,18 @@
 target = process.env.HUBOT_REMOTE_URL
 url = require('url')
-querystring = require('querystring')
 
 module.exports = (robot) ->
   robot.router.post "/hubot/remote", (req, res) ->
-    query = querystring.parse(url.parse(req.url).query)
+    q = req.body
+    robot.logger.info q
+
 
     data =
       as_user: true
-      uesrname: query.user
-      icon_url: query.icon_url
-      channel: query.channel
-      text: query.msg
+      uesrname: q.user
+      icon_url: q.icon_url
+      channel: q.channel
+      text: q.text
 
     robot.customMessage data
   
