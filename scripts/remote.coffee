@@ -6,19 +6,14 @@ module.exports = (robot) ->
     q = req.body
     robot.logger.info q
 
-    envelope =
-      room: q.room
-      uesr:
-        name: q.user
-        icon_url: q.icon_url
-    messages =
-      as_user: true
+    data =
+      username: q.user
       icon_url: q.icon_url
       channel: q.channel
       text: q.text
 
-    robot.send envelope q.text
-  
+  robot.emit 'slack.attachment', data
+
   robot.hear /.*/i, (res) ->
     robot.logger.info res
     data =
@@ -27,3 +22,5 @@ module.exports = (robot) ->
       text: res.message.text
     robot.http(target+"/hubot/remote")
       .post(data) (err, res, body) ->
+        robot.logger.info res
+        robot.logger.info err
