@@ -11,7 +11,7 @@ gohans = yaml.load(fs.readFileSync('data/gohans.yml'))
 Array::shuffle = -> @sort -> 0.5 - Math.random()
 
 module.exports = (robot) ->
-  robot.respond /ごはん決めて$/i, (msg) ->
+  robot.respond /(ごはん|ご飯)決めて$/i, (msg) ->
     msg.send '自分で決めてよ〜〜'
 
   robot.respond /ごはん決めて (.*)$/i, (msg) ->
