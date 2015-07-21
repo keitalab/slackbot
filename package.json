@@ -25,6 +25,7 @@
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-clean": "git://github.com/ryosuketakakuwa/hubot-clean.git",
     "hubot-github-repo-event-notifier": "git://github.com/mactkg/hubot-github-repo-event-notifier.git#feature-wiki",
+    "hubot-ifttt": "git+https://github.com/nagayama/hubot-ifttt.git",
     "hubot-lgtm": "git://github.com/bouzuya/hubot-lgtm.git",
     "hubot-rss-reader": "^0.6.8",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
