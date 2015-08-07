@@ -2,7 +2,8 @@
 #   貯金箱残金確認
 #
 # Commands:
-#   hubot plus - pay money.
+#   hubot hear into x yen - into x yen.
+#   hubot hear out of x yen - out of x yen.
 #   hubot hear check in box - check the saving bank.
 
 module.exports = (robot) ->
