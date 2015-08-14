@@ -13,7 +13,6 @@
 pictures = [
   "http://www.tbs.co.jp/anime/oregairu/special/images/stamp/07.png",
   "http://www.tbs.co.jp/anime/oregairu/special/images/stamp6/3.jpg",
-  "",
 ]
 
 module.exports = (robot) ->
