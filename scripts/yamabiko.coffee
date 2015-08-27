@@ -10,5 +10,6 @@
 module.exports = (robot) ->
     
     robot.respond /(#*.*) say (.+)$/i, (msg) ->
-        to = 'msg.match[1]'
-        robot.send {room: to}, msg.match[2]
+        if /[#@][a-zA-Z0-9_\-]+/.test msg.match[1]
+            envelope = room: "#{msg.match[1]}"
+        msg.send envelope, msg.match[2]
