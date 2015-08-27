@@ -11,4 +11,4 @@ module.exports = (robot) ->
     
     robot.respond /(#*.*) say (.+)$/i, (msg) ->
         to = 'msg.match[1]'
-        msg.send {room: to}, msg.match[2]
+        robot.send {room: to}, msg.match[2]
