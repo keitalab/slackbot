@@ -16,4 +16,4 @@ module.exports = (robot) ->
             envelope = room: "#{msg.match[1]}"
         else
             envelope = config
-        msg.send envelope, msg.match[2]
+        msg.send '#bottestroom', msg.match[2]
