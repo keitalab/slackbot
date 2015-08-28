@@ -7,13 +7,11 @@
 # Hubotのスクリプトはモジュールとして記述し，
 # Hubot起動時にrequireされてexportした関数が呼び出されます
 
-config = room: "bottestroom"
-
 module.exports = (robot) ->
     
-    robot.respond /#*(.*) say (.+)$/i, (msg) ->
+    robot.respond /(#*.*) say (.+)$/i, (msg) ->
         if /[#][a-zA-Z0-9_\-]+/.test msg.match[1]
             envelope = room: "#{msg.match[1]}"
         else
-            envelope = config
-        msg.send '#bottestroom', msg.match[2]
+            envelope = room: "#bottestroom"
+        msg.send envelope, msg.match[2]
