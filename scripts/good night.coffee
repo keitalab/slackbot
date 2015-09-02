@@ -20,5 +20,5 @@ pictures = [
 
 module.exports = (robot) ->
 
-  robot.hear /おやすみ/, (msg) ->
+  robot.hear /おやすみなのです/, (msg) ->
     msg.send msg.random pictures
