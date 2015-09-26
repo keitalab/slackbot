@@ -21,6 +21,7 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
+    "cron": ">=1.0.4",
     "coffee-script": "^1.9.3",
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-clean": "git://github.com/ryosuketakakuwa/hubot-clean.git",
