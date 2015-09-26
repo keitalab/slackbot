@@ -11,7 +11,7 @@ module.exports = (robot) ->
     response.send msg
     
   # *(sec) *(min) *(hour) *(day) *(month) *(day of the week)
-  new cronJob('0 0 * * * *', () ->
+  new cronJob('0 * * * * *', () ->
     currentTime = new Date
     hour = currentTime.getHours()
     minute = currentTime.getMinutes()
