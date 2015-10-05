@@ -17,5 +17,5 @@ pictures = [
 
 module.exports = (robot) ->
 
-  robot.hear /なるなる～/, (msg) ->
+  robot.hear /なるなる/, (msg) ->
     msg.send msg.random pictures
