@@ -21,7 +21,7 @@ module.exports = (robot) ->
     hour = currentTime.getHours()
     day = currentTime.getDate()
     month = currentTime.getMonth()
-    robot.brain.date = 0 unless robot.brain.data.count
+    robot.brain.date = 0 unless robot.brain.date
     robot.brain.date = "#{month}月#{day}日#{hour}時#{minute}分#{second}秒"
     robot.brain.save
     msg.send "Have a nice coffee break."
