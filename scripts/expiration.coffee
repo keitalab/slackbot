@@ -22,7 +22,7 @@ module.exports = (robot) ->
     day = currentTime.getDate()
     month = currentTime.getMonth()
     robot.brain.date = 0 unless robot.brain.date
-    robot.brain.date = "#{month}月#{day}日#{hour}時#{minute}分#{second}秒"
+    robot.brain.date = "#{month + 1}月#{day}日#{hour + 9}時#{minute}分#{second}秒"
     robot.brain.save
     msg.send "Have a nice coffee break."
   robot.hear /notice/, (msg) ->
