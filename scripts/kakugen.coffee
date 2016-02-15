@@ -20,5 +20,5 @@ pictures = [
 
 module.exports = (robot) ->
 
-  robot.respond /今日の格言/, (msg) ->
-    msg.send msg.random pictures
+  robot.respond /今日の格言/, (res) ->
+    res.send res.random pictures
