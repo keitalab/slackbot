@@ -12,7 +12,7 @@ module.exports = (robot) ->
   # every minute AM JST
   new cron '0 * * * * *', () =>
     currentTime = new Date
-    hour = currentTime.getHours()
+    hour = currentTime.getHours()-15
     minute = currentTime.getMinutes()
     robot.send {room: "#{room_name}"}, "#{hour}時#{minute}分です。"
   , null, true, "Asia/Tokyo"
