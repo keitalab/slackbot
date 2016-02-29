@@ -3,7 +3,7 @@
 #
 # Commands:
 #   hubot send - currenttime
-
+###
 cron = require('cron').CronJob
 
 module.exports = (robot) ->
@@ -16,3 +16,4 @@ module.exports = (robot) ->
     minute = currentTime.getMinutes()
     robot.send {room: "#{room_name}"}, "#{hour}時#{minute}分です。"
   , null, true, "Asia/Tokyo"
+###
