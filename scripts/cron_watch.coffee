@@ -3,17 +3,16 @@
 #
 # Commands:
 #   hubot send - currenttime
-cronJob = require('cron').CronJob
+
+cron = require('cron').CronJob
 
 module.exports = (robot) ->
-  send = (room, msg) ->
-    response = new robot.Response(robot, {user : {id : -1, name : room}, text : "none", done : false}, [])
-    response.send msg
-    
-  # *(sec) *(min) *(hour) *(day) *(month) *(day of the week)
-  new cronJob('0 * * * * *', () ->
+  # target room name
+  room_name = "bottestroom"
+  # every minute AM JST
+  new cron '0 * * * * *', () =>
     currentTime = new Date
     hour = currentTime.getHours()
     minute = currentTime.getMinutes()
-    send '#bottestroom', "#{hour}時#{minute}分です。"
-  ).start()
+    robot.send {room: "#{room_name}@#{process.env.HUBOT_XMPP_HOST}"}, "#{hour}時#{minute}分です。"
+  , null, true, "Asia/Tokyo"
