@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "coffee-script": "^1.9.3",
-    "cron": ">=1.0.9",
+    "cron": "^1.0.9",
     "hubot": "^2.17.0",
     "hubot-clean": "git://github.com/ryosuketakakuwa/hubot-clean.git",
     "hubot-github-repo-event-notifier": "git://github.com/mactkg/hubot-github-repo-event-notifier.git#feature-wiki",
