@@ -14,5 +14,5 @@ module.exports = (robot) ->
     currentTime = new Date
     hour = currentTime.getHours()
     minute = currentTime.getMinutes()
-    robot.send {room: "{room_name}"}, "#{hour}時#{minute}分です。"
+    robot.send {room: "#{room_name}"}, "#{hour}時#{minute}分です。"
   , null, true, "Asia/Tokyo"
