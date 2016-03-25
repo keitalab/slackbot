@@ -16,7 +16,7 @@ pictures = [
         'http://cdn.nbcuni.co.jp/gakkougurashi.com/core_sys/images/contents/00000016/block/00000025/00000008.png?1443266345',
         'http://cdn.nbcuni.co.jp/gakkougurashi.com/core_sys/images/contents/00000049/block/00000137/00000105.png?1443266366',
         'http://cdn.nbcuni.co.jp/gakkougurashi.com/core_sys/images/contents/00000055/block/00000158/00000126.png?1443266371',
-        'http://gakkougurashi.com/core_sys/images/contents/00000067/block/00000210/00000165.png?1456809773'
+        'http://gakkougurashi.com/core_sys/images/contents/00000067/block/00000210/00000165.png?1456809773',
         'http://www.classroom-crisis.com/assets/img/special/15_stamp/03/web/03_stamp03.jpg',
         'http://www.classroom-crisis.com/assets/img/special/15_stamp/03/web/03_stamp06.jpg',
         'http://www.classroom-crisis.com/assets/img/special/15_stamp/06/web/06_stamp02.jpg',
@@ -27,12 +27,6 @@ pictures = [
 module.exports = (robot) ->
   # target room name
   room_name = "#bottestroom"
-  # every minute AM JST
-  new cron '0 0 8 * * *', () =>
-    picture = pictures[Math.floor(Math.random() * pictures.length)]
-    robot.send {room: "#{room_name}"}, "今日の格言 " + picture
-  , null, true, "Asia/Tokyo"
-
   # every minute AM JST
   new cron '0 0 8 * * *', () =>
     picture = pictures[Math.floor(Math.random() * pictures.length)]
