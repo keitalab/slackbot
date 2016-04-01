@@ -21,12 +21,13 @@ pictures = [
         'http://www.classroom-crisis.com/assets/img/special/15_stamp/03/web/03_stamp06.jpg',
         'http://www.classroom-crisis.com/assets/img/special/15_stamp/06/web/06_stamp02.jpg',
         'http://www.classroom-crisis.com/assets/img/special/15_stamp/12/web/12_stamp01.jpg',
+        'http://www.classroom-crisis.com/assets/img/special/15_stamp/12/web/12_stamp04.jpg',
         'http://phantom-world.com/special/episodeIcon/episode05/05.png'
         ]
 
 module.exports = (robot) ->
   # target room name
-  room_name = "#bottestroom"
+  room_name = "#bot_times"
   # every minute AM JST
   new cron '0 0 8 * * *', () =>
     picture = pictures[Math.floor(Math.random() * pictures.length)]
