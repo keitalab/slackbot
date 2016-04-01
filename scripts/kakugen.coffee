@@ -13,6 +13,7 @@
 cron = require('cron').CronJob
 
 pictures = [
+        'http://www.tbs.co.jp/anime/oregairu/special/images/stamp8/3.jpg',
         'http://cdn.nbcuni.co.jp/gakkougurashi.com/core_sys/images/contents/00000016/block/00000025/00000008.png?1443266345',
         'http://cdn.nbcuni.co.jp/gakkougurashi.com/core_sys/images/contents/00000049/block/00000137/00000105.png?1443266366',
         'http://cdn.nbcuni.co.jp/gakkougurashi.com/core_sys/images/contents/00000055/block/00000158/00000126.png?1443266371',
