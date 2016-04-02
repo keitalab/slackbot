@@ -23,7 +23,7 @@ pictures = [
 
 module.exports = (robot) ->
   # target room name
-  room_name = "#bottestroom"
+  room_name = "#times_bot"
   # every minute AM JST
   new cron '0 0 22 * * *', () =>
     picture = pictures[Math.floor(Math.random() * pictures.length)]
