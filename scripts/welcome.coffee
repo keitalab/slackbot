@@ -9,5 +9,5 @@ _ = require 'lodash'
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    if _.contains ['#bottestroom', '#times_bot'], msg.envelope.room
+    if _.contains ['bottestroom', 'times_bot'], msg.envelope.room
         msg.send "ようこそ #{msg.message.user.name}-san"
