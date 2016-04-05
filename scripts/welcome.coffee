@@ -5,9 +5,10 @@
 # Commands:
 #   hubot send - Greet when entering.
 
-_ = require 'lodash'
+room = ['bottestroom', 'times_bot']
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    if _.contains ['bottestroom', 'times_bot'], msg.envelope.room
+    for i in room
+      if room is msg.envelope.room
         msg.send "ようこそ #{msg.message.user.name}-san"
