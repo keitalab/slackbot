@@ -10,5 +10,5 @@ here = msg.envelope.room
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-      if here is room
-        msg.send "ようこそ #{msg.message.user.name}-san"
+    if here is room
+      msg.send "ようこそ #{msg.message.user.name}-san"
