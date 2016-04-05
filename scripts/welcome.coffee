@@ -5,10 +5,9 @@
 # Commands:
 #   hubot send - Greet when entering.
 
-room = bottestroom
-here = msg.envelope.room
+room = "bottestroom"
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    if here is room
+    if room is msg.envelope.room
       msg.send "ようこそ #{msg.message.user.name}-san"
