@@ -18,4 +18,4 @@ module.exports = (robot) ->
     if msg.envelope.room is room
       msg.send "ようこそ #{msg.message.user.name}さん、#times_bot もよろしくね"
     else if msg.envelope.room is room2
-      msg.send "WELCOME TO THE PHANTOM WORLD" + msg.random picture
+      msg.send "WELCOME TO THE PHANTOM WORLD\n" + msg.random picture
