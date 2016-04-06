@@ -6,8 +6,16 @@
 #   hubot send - Greet when entering.
 
 room = "bottestroom"
+room2 = "times_bot"
+picture = ['http://phantom-world.com/special/twitter/icon/PW01.png',
+  'http://phantom-world.com/special/twitter/icon/PW02.png',
+  'http://phantom-world.com/special/twitter/icon/PW03.png',
+  'http://phantom-world.com/special/twitter/icon/PW04.png'
+  ]
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    if room is msg.envelope.room
-      msg.send "ようこそ #{msg.message.user.name}-san"
+    if msg.envelope.room is room
+      msg.send "ようこそ #{msg.message.user.name}さん、#times_botもよろしくね"
+    else if msg.envelope.room is room2
+      msg.send "WELCOME TO THE PHANTOM WORLD" + msg.random picture
