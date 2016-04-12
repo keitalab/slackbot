@@ -32,6 +32,9 @@ module.exports = (robot) ->
   room_name = "#times_bot"
   # every minute AM JST
   new cron '0 0 8 * * *', () =>
-    picture = pictures[Math.floor(Math.random() * pictures.length)]
+    i = Math.floor(Math.random() * pictures.length)
+    picture = pictures[i]
     robot.send {room: "#{room_name}"}, "今日の格言 " + picture
+    if i is 11
+      robot.send {room: "#random"}, picture
   , null, true, "Asia/Tokyo"
