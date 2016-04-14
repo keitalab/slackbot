@@ -6,13 +6,19 @@
 
 cron = require('cron').CronJob
 
+pictures = [
+        'test中です',
+        'test中ですよ'
+        ]
+
 module.exports = (robot) ->
   # target room name
-  room_name = # "#bottestroom"
+  room_name = "#bottestroom"
   # every minute AM JST
   new cron '0 * * * * *', () =>
-    currentTime = new Date
-    hour = currentTime.getHours()-15
-    minute = currentTime.getMinutes()
-    robot.send {room: "#{room_name}"}, "#{hour}時#{minute}分です。"
+    i = Math.floor(Math.random() * pictures.length)
+    picture = pictures[i]
+    robot.send {room: "#{room_name}"}, "times_botでも" + picture
+    if i is 0
+      robot.send {room: "#times_bot"}, picture
   , null, true, "Asia/Tokyo"
