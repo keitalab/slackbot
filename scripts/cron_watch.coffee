@@ -18,7 +18,7 @@ module.exports = (robot) ->
   new cron '0 * * * * *', () =>
     i = Math.floor(Math.random() * pictures.length)
     picture = pictures[i]
-    robot.send {room: "#{room_name}"}, "times_botでも" + picture
+    robot.send {room: "#{room_name}"}, "#times_botでも" + picture
     if i is 0
       robot.send {room: "#times_bot"}, picture
   , null, true, "Asia/Tokyo"
