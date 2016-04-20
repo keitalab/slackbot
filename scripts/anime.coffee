@@ -23,6 +23,7 @@ cour = ->
     return "#{year}/4"
 
 module.exports = (robot) ->
+    MSG = '今期のアニメ一覧です。'
     ERR_MSG = 'Anime RESTful APIの呼出に失敗しました。'
     NIL_MSG = 'NO DATA'
     
@@ -34,12 +35,12 @@ module.exports = (robot) ->
             data = JSON.parse(body)
             t = new table
             for anime in data
-                t.cell('Twitter', '@' + anime.twitter_account)
                 t.cell('Title', anime.title)
+                t.cell('Twitter', '@' + anime.twitter_account)
                 t.cell('Webpage', anime.public_url)
                 t.newRow()
             if t.rows.length > 0
-                return msg.reply('\n' + t.print().trim() + '\n')
+                return msg.reply(MSG + '\n' + t.print().trim() + '\n')
             msg.reply(NIL_MSG)
     
     robot.respond /anime\s+(.+)$/i, (msg) ->
@@ -53,8 +54,8 @@ module.exports = (robot) ->
             t = new table
             for anime in data
                 if anime.title.search(pattern) >= 0 or anime.title_short1.search(pattern) >= 0 or anime.title_short2.search(pattern) >= 0 or anime.title_short3.search(pattern) >= 0
-                    t.cell('Twitter', '@' + anime.twitter_account)
                     t.cell('Title', anime.title)
+                    t.cell('Twitter', '@' + anime.twitter_account)
                     t.cell('Webpage', anime.public_url)
                     t.newRow()
             if t.rows.length > 0
