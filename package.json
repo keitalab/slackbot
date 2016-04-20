@@ -34,7 +34,9 @@
     "hubot-tweets": "0.0.1",
     "hubot-zoi": "^0.1.0",
     "js-yaml": "3.2.7",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "easy-table": ">=1.0.x",
+    "moment": "^2.13.0"
   },
   "engines": {
     "node": ">= 0.8.x",
