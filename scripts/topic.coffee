@@ -4,6 +4,8 @@
 # Commands:
 #   hubot send - Greet when changing the topic.
 
+config = to: "times_bot"
+
 module.exports = (robot) ->
   robot.topic (res) ->
-    res.send "【重要】 #{res.message.text}"
+    res.send {room: to}"[New topic] #{res.message.text} {res.envelope.room}"
