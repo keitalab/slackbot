@@ -9,4 +9,4 @@ config = to: "#times_bot"
 module.exports = (robot) ->
   robot.topic (msg) ->
     to = config.to
-    robot.send {room: to}, "New topic: #{msg.message.text}"
+    robot.send {room: to}, "New topic: #{msg.message.text} ##{msg.envelope.room}"
