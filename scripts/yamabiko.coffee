@@ -12,7 +12,7 @@ config = to: "#times_bot"
 module.exports = (robot) ->
     
     robot.respond /(#*.*) say (.+)$/i, (msg) ->
-        if /[#][a-zA-Z0-9_\-]+/.test msg.match[1]
+        if /#.+/.test msg.match[1]
             to = msg.match[1]
         else
             to = config.to
