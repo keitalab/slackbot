@@ -1,5 +1,5 @@
 # Description:
-#   チャット上で遊戯王カードWikiを検索、一枚ずつ指定なら《》でカード名を囲む　例：《青眼の白龍》
+#   チャット上で遊戯王カードを検索
 #
 #   参考：
 #   http://shokai.org/blog/archives/9485
@@ -11,4 +11,4 @@ module.exports = (robot) ->
     robot.respond /ysearch *(.*)$/i, (msg) ->
         url = msg.match[1]
         url_encoded = encodeURI url
-        msg.send "http://yugioh-wiki.net/index.php?#{url_encoded}"
+        msg.send "http://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&sess=1&keyword=#{url_encoded}&stype=1&ctype=&starfr=&starto=&atkfr=&atkto=&deffr=&defto=&pscale=&othercon=2"
