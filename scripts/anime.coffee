@@ -20,7 +20,8 @@ cour = ->
         return "/#{year}/2"
     if month < 9
         return "/#{year}/3"
-    return "#{year}/4"
+    else
+        return "#{year}/4"
 
 module.exports = (robot) ->
     MSG = '今期のアニメ一覧です。'
