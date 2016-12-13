@@ -7,9 +7,9 @@
 
 room = "tsf_report"
 picture = [
-  'http://konosuba.com/special/img/stamp15.png',
-  'http://konosuba.com/special/img/stamp17.png',
-  'http://konosuba.com/special/img/stamp19.png'
+  'http://www.classroom-crisis.com/assets/img/special/15_stamp/01/web/01_stamp01.jpg',
+  'http://www.flyingwitch.jp/images/special/tw_stamp/1-1.png',
+  'http://www.tbs.co.jp/anime/gn/special/img/stamp_02/08.png'
   ]
 
 module.exports = (robot) ->
