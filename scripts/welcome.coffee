@@ -7,15 +7,14 @@
 
 room = "bottestroom"
 room2 = "times_bot"
-picture = ['http://phantom-world.com/special/twitter/icon/PW01.png',
-  'http://phantom-world.com/special/twitter/icon/PW02.png',
-  'http://phantom-world.com/special/twitter/icon/PW03.png',
-  'http://phantom-world.com/special/twitter/icon/PW04.png'
+picture = ['http://konosuba.com/1st/special/img/stamp10.png',
+  'http://konosuba.com/1st/special/img/stamp11.png',
+  'http://konosuba.com/1st/special/img/stamp12.png'
   ]
 
 module.exports = (robot) ->
   robot.enter (msg) ->
     if msg.envelope.room is room
-      msg.send "ようこそ #{msg.message.user.name}さん、#times_bot もよろしくね"
+      msg.send "ようこそ #{msg.message.user.name}さん"
     else if msg.envelope.room is room2
-      msg.send "WELCOME TO THE PHANTOM WORLD\n" + msg.random picture
+      msg.send "WELCOME TO THE ACCELERATED WORLD\n" + msg.random picture
