@@ -1,4 +1,4 @@
-CnLIYkrUEAEeWDY# Description:
+# Description:
 #   時間に応じて通知
 #
 # Dependencies:
